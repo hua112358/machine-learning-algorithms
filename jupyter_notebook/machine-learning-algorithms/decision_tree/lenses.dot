@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="tear_rate=reduced <= 0.5\ngini = 0.5382\nsamples = 24\nvalue = [4, 15, 5]\nclass = no lenses", fillcolor="#39e58186"] ;
+1 [label="astigmatic=no <= 0.5\ngini = 0.6528\nsamples = 12\nvalue = [4, 3, 5]\nclass = soft", fillcolor="#8139e520"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="prescript=myope <= 0.5\ngini = 0.4444\nsamples = 6\nvalue = [4, 2, 0]\nclass = hard", fillcolor="#e581397f"] ;
+1 -> 2 ;
+3 [label="age=young <= 0.5\ngini = 0.4444\nsamples = 3\nvalue = [1, 2, 0]\nclass = no lenses", fillcolor="#39e5817f"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 2\nvalue = [0, 2, 0]\nclass = no lenses", fillcolor="#39e581ff"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]\nclass = hard", fillcolor="#e58139ff"] ;
+3 -> 5 ;
+6 [label="gini = 0.0\nsamples = 3\nvalue = [3, 0, 0]\nclass = hard", fillcolor="#e58139ff"] ;
+2 -> 6 ;
+7 [label="age=presbyopic <= 0.5\ngini = 0.2778\nsamples = 6\nvalue = [0, 1, 5]\nclass = soft", fillcolor="#8139e5cc"] ;
+1 -> 7 ;
+8 [label="gini = 0.0\nsamples = 4\nvalue = [0, 0, 4]\nclass = soft", fillcolor="#8139e5ff"] ;
+7 -> 8 ;
+9 [label="prescript=hyper <= 0.5\ngini = 0.5\nsamples = 2\nvalue = [0, 1, 1]\nclass = no lenses", fillcolor="#39e58100"] ;
+7 -> 9 ;
+10 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]\nclass = no lenses", fillcolor="#39e581ff"] ;
+9 -> 10 ;
+11 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]\nclass = soft", fillcolor="#8139e5ff"] ;
+9 -> 11 ;
+12 [label="gini = 0.0\nsamples = 12\nvalue = [0, 12, 0]\nclass = no lenses", fillcolor="#39e581ff"] ;
+0 -> 12 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
